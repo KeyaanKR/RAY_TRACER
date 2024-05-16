@@ -1,0 +1,3 @@
+/home/hellper/Desktop/RAY_TRACER/build/CMakeFiles/raytracer.dir
+/home/hellper/Desktop/RAY_TRACER/build/CMakeFiles/edit_cache.dir
+/home/hellper/Desktop/RAY_TRACER/build/CMakeFiles/rebuild_cache.dir
