@@ -41,7 +41,7 @@ public:
   }
 };
 
-using point3 = vector_3;
+using point_3 = vector_3;
 
 // utility functions
 

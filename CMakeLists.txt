@@ -11,6 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add source files (replace these with your actual source files)
 add_executable(raytracer
     src/main.cpp
+    src/vec3.h
+    src/color.h
     # Add all other source files
 )
 
