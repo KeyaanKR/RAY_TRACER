@@ -207,7 +207,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  ../src/ray.h
 
 
 /usr/include/c++/11/bits/istream.tcc:
@@ -503,6 +504,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/specfun.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
+
+../src/ray.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
