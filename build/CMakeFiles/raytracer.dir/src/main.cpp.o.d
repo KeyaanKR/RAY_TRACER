@@ -1,8 +1,8 @@
 CMakeFiles/raytracer.dir/src/main.cpp.o: \
  /home/hellper/Desktop/RAY_TRACER/src/main.cpp /usr/include/stdc-predef.h \
  /home/hellper/Desktop/RAY_TRACER/src/hittable.h \
- /home/hellper/Desktop/RAY_TRACER/src/ray.h \
- /home/hellper/Desktop/RAY_TRACER/src/vec3.h /usr/include/c++/11/cmath \
+ /home/hellper/Desktop/RAY_TRACER/src/interval.h \
+ /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -85,7 +85,9 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/iostream \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /home/hellper/Desktop/RAY_TRACER/src/ray.h \
+ /home/hellper/Desktop/RAY_TRACER/src/vec3.h /usr/include/c++/11/iostream \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
