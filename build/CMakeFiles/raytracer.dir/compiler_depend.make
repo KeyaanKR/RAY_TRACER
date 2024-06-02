@@ -3,9 +3,9 @@
 
 CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
+  ../src/camera.h \
   ../src/hittable.h \
-  ../src/ray.h \
-  ../src/vec3.h \
+  ../src/interval.h \
   /usr/include/c++/11/cmath \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -98,6 +98,10 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../src/ray.h \
+  ../src/vec3.h \
+  ../src/random.h \
+  /usr/include/c++/11/cstdlib \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -172,7 +176,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
-  /usr/include/c++/11/cstdlib \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -209,7 +212,16 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../src/hittable_list.h \
+  ../src/rt.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
@@ -235,31 +247,16 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
+  ../src/color.h \
+  ../src/hittable_list.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  ../src/rt.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  ../src/color.h \
   ../src/sphere.h
 
 
 ../src/sphere.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
@@ -270,10 +267,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/array:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
-
-/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
@@ -288,6 +281,16 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/memory:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/limits.h:
 
@@ -405,6 +408,12 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/stdint.h:
+
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
@@ -438,12 +447,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/ext/string_conversions.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -485,22 +488,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/c++/11/bits/shared_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/bits/allocator.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/11/pstl/pstl_config.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
 /usr/include/features.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
@@ -514,6 +501,20 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/endian.h:
 
 ../src/hittable.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/11/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/11/pstl/pstl_config.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -545,7 +546,17 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ostream:
 
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
 ../src/main.cpp:
+
+../src/camera.h:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -556,8 +567,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/c++/11/ios:
-
-../src/vec3.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -573,25 +582,29 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
+/usr/include/c++/11/bits/nested_exception.h:
+
 ../src/color.h:
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
 /usr/include/c++/11/ext/type_traits.h:
 
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/c++/11/cmath:
 
-/usr/include/math.h:
-
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/math.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/usr/include/c++/11/cwchar:
+
+/usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
@@ -604,6 +617,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
 
@@ -625,14 +640,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/exception_defines.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/11/ext/atomicity.h:
-
-../src/ray.h:
-
-/usr/include/c++/11/bits/stl_pair.h:
-
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/c++/11/bits/move.h:
@@ -642,6 +649,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/type_traits:
 
 /usr/include/c++/11/debug/assertions.h:
+
+../src/random.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -659,9 +668,9 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bit:
 
-/usr/include/c++/11/cstdlib:
-
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
@@ -687,6 +696,16 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/c++/11/ext/atomicity.h:
+
+/usr/include/c++/11/bits/stl_pair.h:
+
+../src/ray.h:
+
+../src/vec3.h:
+
 /usr/include/c++/11/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -705,14 +724,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/postypes.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/usr/include/c++/11/bits/stl_algobase.h:
-
-/usr/include/c++/11/cwchar:
-
-/usr/include/c++/11/bits/nested_exception.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
@@ -726,6 +737,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+../src/interval.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -748,7 +761,3 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/char_traits.h:
 
 /usr/include/c++/11/cstdint:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:

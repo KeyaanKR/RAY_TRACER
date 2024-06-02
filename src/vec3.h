@@ -1,7 +1,9 @@
 #ifndef VECTOR3_H
 #define VECTOR3_H
 
+#include "random.h"
 #include <cmath>
+#include <cstdlib>
 #include <iostream>
 
 class vector_3 {
@@ -38,6 +40,15 @@ public:
 
   double length_squared() const {
     return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
+  }
+
+  static vector_3 random() {
+    return vector_3(random_double(), random_double(), random_double());
+  }
+
+  static vector_3 random(double min, double max) {
+    return vector_3(random_double(min, max), random_double(min, max),
+                    random_double(min, max));
   }
 };
 
@@ -80,5 +91,22 @@ inline vector_3 cross(const vector_3 &u, const vector_3 &v) {
 }
 
 inline vector_3 unit_vector(vector_3 v) { return v / v.length(); }
+
+inline vector_3 random_unit_vector() {
+  while (true) {
+    auto p = vector_3::random(-1, 1);
+    auto length_sq = p.length_squared();
+    if (1e-160 < length_sq && length_sq <= 1)
+      return p / sqrt(length_sq);
+  }
+}
+
+inline vector_3 random_on_hemisphere(const vector_3 &normal) {
+  vector_3 on_unit_sphere = random_unit_vector();
+  if (dot(on_unit_sphere, normal) > 0.0)
+    return on_unit_sphere;
+  else
+    return -on_unit_sphere;
+}
 
 #endif

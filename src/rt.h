@@ -1,6 +1,7 @@
 #ifndef RT_H
 #define RT_H
 
+#include "random.h"
 #include <cmath>
 #include <iostream>
 #include <limits.h>
