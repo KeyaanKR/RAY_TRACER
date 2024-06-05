@@ -3,11 +3,15 @@
 
 #include "interval.h"
 #include "ray.h"
+#include <memory>
+
+class material;
 
 class hit_record {
 public:
   point_3 p;
   vector_3 normal;
+  std::shared_ptr<material> mat;
   double t;
 
   bool front_face;

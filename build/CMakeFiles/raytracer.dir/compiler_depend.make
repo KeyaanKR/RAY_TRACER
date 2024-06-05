@@ -212,16 +212,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../src/rt.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/c++/11/memory \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
@@ -247,7 +237,18 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
+  ../src/material.h \
   ../src/color.h \
+  ../src/rt.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   ../src/hittable_list.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_vector.h \
@@ -262,11 +263,21 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/c++/11/array:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
@@ -281,16 +292,6 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/memory:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/c++/11/bits/stl_relops.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
 /usr/include/limits.h:
 
@@ -607,6 +608,8 @@ CMakeFiles/raytracer.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+../src/material.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
