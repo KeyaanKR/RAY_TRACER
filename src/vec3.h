@@ -118,4 +118,12 @@ inline vector_3 reflect(const vector_3 &v, const vector_3 &n) {
   return v - 2 * dot(v, n) * n;
 }
 
+inline vector_3 refract(const vector_3 &uv, const vector_3 &n,
+                        double etai_over_etat) {
+  auto cos_theta = fmin(dot(-uv, n), 1.0);
+  vector_3 r_out_perp = etai_over_etat * (uv + cos_theta * n);
+  vector_3 r_out_parallel = -sqrt(fabs(1.0 - r_out_perp.length_squared())) * n;
+  return r_out_perp + r_out_parallel;
+}
+
 #endif
