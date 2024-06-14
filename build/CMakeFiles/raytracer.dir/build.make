@@ -92,6 +92,8 @@ raytracer_EXTERNAL_OBJECTS =
 
 raytracer: CMakeFiles/raytracer.dir/src/main.cpp.o
 raytracer: CMakeFiles/raytracer.dir/build.make
+raytracer: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+raytracer: /usr/lib/x86_64-linux-gnu/libpthread.a
 raytracer: CMakeFiles/raytracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hellper/Desktop/RAY_TRACER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable raytracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)

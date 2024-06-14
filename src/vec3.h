@@ -97,6 +97,14 @@ inline vector_3 cross(const vector_3 &u, const vector_3 &v) {
 
 inline vector_3 unit_vector(vector_3 v) { return v / v.length(); }
 
+inline vector_3 random_in_unit_disk() {
+  while (true) {
+    auto p = vector_3(random_double(-1, 1), random_double(-1, 1), 0);
+    if (p.length_squared() < 1)
+      return p;
+  }
+}
+
 inline vector_3 random_unit_vector() {
   while (true) {
     auto p = vector_3::random(-1, 1);
